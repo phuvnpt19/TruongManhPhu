@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div style="background-color:yellow" id="changeColorDiv">
+			<p>TEXT</p>
+			<button onclick="myFunction()">Click me!</button>
+		</div>
+		
+		<div id="setColor">
+			<h1>Add Solution</h1>
+			<p>First Pragraph</p>
+			<p>Second Pragraph</p>
+		</div>
+
+    <form onclick="text()" name="abc" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        Some Number
+                    </td>
+                    <td>
+                        <input type="text" name="num1"><span id="1"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Some Number
+                    </td>
+                    <td>
+                        <input type="password" name="num2"> <span id="2"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Some Number
+                    </td>
+                    <td>
+                        <input type="email" id="num3">  <span id="3"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="submit"></td>
+                </tr>
+                
+            </table>
+        </form>
+
+<table>
+			<select>
+			<option>Email</option>
+			</select>
+			
+			<input type="text"></input>
+			Components
+			<input type="text"></input></br>
+			<tr>
+				<td>
+					<input type="submit" id="addRow"></input>
+					<input type="text"></input>
+				</td>
+			</tr>
+		</table>
+
+
+
+<style>
+	.myClass{
+		color : red;
+	}
+</style>
+//cau1		
+<script>
+function myFunction() {
+    document.getElementById("changeColorDiv").style.backgroundColor = "red";
+}
+</script>
+		
+
+//cau2
+<script>
+			$("h1").click(function(){
+			$("#setColor").addClass("myClass");
+		});
+
+</script>	
+
+//cau3
+<script>
+function text(abc){
+    if(num1<1)
+    {
+         document.getElementById("1").innerHTML= "Number 1 khong duoc de trong";       
+    }
+    else
+    {    
+        document.getElementById("1").innerHTML=null;
+    } 
+    if(num2<1)
+    {
+        document.getElementById("2").innerText= "Number 2 khong duoc de trong";
+    }
+    else
+    {
+        document.getElementById("2").innerText= null;
+    }
+	if(num3<1)
+    {
+         document.getElementById("3").innerHTML= "Number 3 khong duoc de trong";       
+    }
+    else
+    {    
+        document.getElementById("3").innerHTML=null;
+    }  
+}
+</script>
+
+
+//cau4
+<script>
+		$("#addRow").click(function(){
+			$("table tr:last").after("<tr> <td> <input type='submit' id='addRow'></input> <input type='text'></input> </td> </tr>")
+		});
+
+</script>
+
+
+	
+	</body>
+</html>
